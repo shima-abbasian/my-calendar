@@ -13,7 +13,7 @@
         <div class="calendar mt-5">
             <div id='calendar' class=""></div>
         </div>
-        <div class="tasks">1</div>
+        <div class="tasks calendar mt-5">tasks</div>
     </div>
 
 </div>
@@ -23,39 +23,41 @@
     document.addEventListener('DOMContentLoaded', function () {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
+
             //initialView: 'dayGridDay',
             // initialView: 'dayGridMonth',
             //initialView: 'dayGridWeek',
             firstDay: 6,
-            direction:"rtl",
+            direction: "rtl",
             selectable: true,
             locale: 'fa',
+
             // موقع کلیک شدن روی هر روز یک آلرت میدهد.و رنگ آن قرمز میشود.
-        //     dateClick: function(info) {
-        //     alert('Clicked on: ' + info.dateStr);
-        //     alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
-        //     alert('Current view: ' + info.view.type);
-        //     // change the day's background color just for fun
-        //     info.dayEl.style.backgroundColor = 'red';
-        // },
+            //     dateClick: function(info) {
+            //     alert('Clicked on: ' + info.dateStr);
+            //     alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
+            //     alert('Current view: ' + info.view.type);
+            //     // change the day's background color just for fun
+            //     info.dayEl.style.backgroundColor = 'red';
+            // },
             // موقع کلیک شدن روی هر روز یک آلرت میدهد.و رنگ آن قرمز میشود.
 
-
-                headerToolbar: {
-                    center: 'timeGridFourDay,dayGridFourWeek,dayGridMonth' // buttons for switching between views
+            headerToolbar: {
+                center: 'timeGridFourDay,dayGridFourWeek,dayGridMonth' // buttons for switching between views
+            },
+            views: {
+                dayGridFourWeek: {
+                    type: 'timeGrid',
+                        duration: {week: 1},
+                    buttonText: 'هفته'
                 },
-                views: {
-                    dayGridFourWeek: {
-                        type: 'timeGrid',
-                        duration: { week: 1 },
-                        buttonText: 'week'
-                    },
-                    timeGridFourDay: {
-                        type: 'timeGrid',
-                        duration: { days: 1 },
-                        buttonText: 'days'
-                    },
-                }
+                timeGridFourDay: {
+                    type: 'timeGrid',
+                    duration: {days: 1},
+                    buttonText: 'روز'
+                },
+            },
+
         });
 
         calendar.render();
@@ -74,5 +76,7 @@
 <!--</script>-->
 <script src="lib/main.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="lib/locales/fa.js"></script>
+
 </body>
 </html>

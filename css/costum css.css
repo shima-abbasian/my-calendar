@@ -1,3 +1,24 @@
+@font-face {
+    font-family: "IRANSansWeb";
+    src: url("fonts/IRANSansWeb.eot");
+    src: url("fonts/IRANSansWeb_Bold.eot") format("eot");
+    src: url("fonts/IRANSansWeb_Light.eot") format("eot");
+    src: url("fonts/IRANSansWeb_UltraLight.eot") format("eot");
+    src: url("fonts/IRANSansWeb_Medium.eot") format("eot");
+
+}
+
+@font-face {
+    font-family: "iranYekan";
+    src: url("fonts/iranyekanwebbold(fanum).eot");
+    src: url("fonts/iranyekanweblight(fanum).eot") format("eot");
+    src: url("fonts/iranyekanwebregular(fanum).eot") format("eot");
+}
+*{
+    font-family: IRANSansWeb;
+    color: black;
+
+}
 body{
     background: rgb(150,238,225);
     background: linear-gradient(227deg, rgba(150,238,225,1) 0%, rgba(45,182,162,1) 51%);
@@ -27,4 +48,28 @@ body{
 }
 .tasks{
     width: 35%
+}
+/*calendar*/
+.fc .fc-toolbar-title{
+    font-size:14px;
+}
+.fc .fc-col-header-cell-cushion{
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+}
+.fc .fc-daygrid-day-number{
+    color: black;
+    text-decoration: none;
+}
+.fc .fc-daygrid-day.fc-day-today{
+    background: linear-gradient(227deg, #8779cc 0%, #e861a7 100%);
+}
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number{
+    color: white;
+}
+.fc-theme-standard td,
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid{
+    border: none;
 }
