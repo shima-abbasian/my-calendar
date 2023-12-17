@@ -1,0 +1,30 @@
+body{
+    background: rgb(150,238,225);
+    background: linear-gradient(227deg, rgba(150,238,225,1) 0%, rgba(45,182,162,1) 51%);
+}
+.originDivision{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.holderCalendar{
+    width: 65%;
+    height: 85%;
+    border: none;
+    background-color: white;
+    background-image: url("../img/ui_elements_calendar.1.png");
+    margin:auto ;
+    border-radius: 16px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.calendar{
+    width: 60%;
+    padding: 150px 50px 50px;
+}
+.tasks{
+    width: 35%
+}

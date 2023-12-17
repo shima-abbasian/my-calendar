@@ -1,10 +1,14 @@
-# FullCalendar
 
-A full-sized drag & drop JavaScript event calendar
+# FullCalendar Scheduler
 
-- [Project website and demos](http://fullcalendar.io/)
-- [Documentation](http://fullcalendar.io/docs)
-- [Support](http://fullcalendar.io/support)
-- [Contributing](CONTRIBUTING.md)
+A premium add-on to [FullCalendar](http://fullcalendar.io/) for displaying events and resources.
+
+- [Project website and demos](http://fullcalendar.io/scheduler)
+- [License](http://fullcalendar.io/scheduler/license)
 - [Changelog](CHANGELOG.md)
-- [License](LICENSE.txt)
+- [Contributing](CONTRIBUTING.md)
+
+
+## Development Setup
+
+This repo is not capable of building dist files on its own. You must develop in the [main fullcalendar repo](https://github.com/fullcalendar/fullcalendar), which is a monorepo that references this one via git submodules.
